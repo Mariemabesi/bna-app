@@ -1,0 +1,71 @@
+:root {
+  --bna-green: #00803e;
+  --bna-black: #1a1a1a;
+  --bna-grey: #f8f9fa;
+}
+
+.transactions-page {
+  padding: 20px;
+  background-color: var(--bna-grey);
+  min-height: 100vh;
+}
+
+.transactions-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--bna-green);
+  margin-bottom: 20px;
+}
+
+.transactions-table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.transactions-table th {
+  background-color: var(--bna-green);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.transactions-table tr:hover {
+  background-color: rgba(0, 128, 62, 0.05);
+}
+
+.amount-in {
+  color: green;
+  font-weight: 600;
+}
+
+.amount-out {
+  color: red;
+  font-weight: 600;
+}
+
+/* ✅ Responsive pour mobile */
+@media (max-width: 768px) {
+  .transactions-title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .transactions-table th, .transactions-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

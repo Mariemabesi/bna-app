@@ -1,0 +1,10 @@
+.bar-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.bar-container h3 {
+  color: #00703c;
+  margin-bottom: 10px;
+}

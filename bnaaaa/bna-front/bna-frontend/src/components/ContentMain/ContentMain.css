@@ -1,0 +1,138 @@
+/* ===== Main dashboard content area ===== */
+.content-main {
+  flex: 1;
+  padding: 50px 40px; /* more breathing room on desktop */
+  background-color: #f8f9fa; /* Light grey background */
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* spacing between each section */
+  overflow-y: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ===== CARDS section ===== */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* better size for desktop */
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 18px;
+  color: #222a42; /* BNA green */
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== BUDGET + TRANSACTIONS section ===== */
+.budget-transactions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two-column layout on large screens */
+  gap: 30px;
+  align-items: start;
+}
+
+.budget-col,
+.transactions-col {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+}
+
+.budget-col h3,
+.transactions-col h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00703c;
+  margin-bottom: 16px;
+}
+
+.transactions-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.transactions-col li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0; 
+  font-size: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.transactions-col li:last-child {
+  border-bottom: none;
+}
+
+/* ===== CHARTS section ===== */
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.chart-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-box h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #00703c;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* ===== Scrollbar styling ===== */
+.content-main::-webkit-scrollbar {
+  width: 8px;
+}
+.content-main::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 112, 60, 0.6);
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 1200px) {
+  .content-main {
+    padding: 20px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-main {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .budget-transactions-row {
+    grid-template-columns: 1fr; /* stack vertically on small screens */
+  }
+
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
